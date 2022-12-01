@@ -1,0 +1,10 @@
+(defun MYBUTLAST (itens lista)
+    (let ((copia (reverse lista)))
+        (dotimes (i itens copia)
+            (setf copia (cdr copia))
+        )
+        (reverse copia)
+    )
+)
+
+#(write (MYBUTLAST 2 '(1 2 3 4 5))) deve retornar (1 2 3)
